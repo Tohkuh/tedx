@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14110F;
+  --color-ink-2: #1F1A16;
+  --color-cream: #F6EEDD;
+  --color-brand-red: #D12A38;
+  --color-gold: #E8A317;
+  --color-muted: #CBBFA8;
+  --color-cream-text: #3A3128;
+  --color-dashed: #8A7A62;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: var(--color-cream);
+  background: var(--color-ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 360px; margin: 0; background: var(--color-ink); }
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+.page-shell { width: 100%; max-width: 1360px; margin: 0 auto; overflow: clip; background: var(--color-ink); }
+.site-header { position: relative; z-index: 5; display: flex; min-height: 84px; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 48px; }
+.brand { flex: 0 0 auto; font-size: 20px; font-weight: 700; white-space: nowrap; }
+.brand-mark { color: var(--color-brand-red); font-weight: 800; }
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; font-size: 15px; }
+.site-nav a { display: inline-flex; min-height: 44px; align-items: center; transition: color 160ms ease; }
+.site-nav a:hover { color: var(--color-gold); }
+.menu-toggle { display: none; min-width: 64px; min-height: 44px; align-items: center; justify-content: center; border: 1px solid var(--color-dashed); background: transparent; color: var(--color-cream); cursor: pointer; }
+.btn { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; border: 1px solid var(--color-gold); padding: 12px 20px; color: var(--color-gold); font-size: 15px; font-weight: 700; line-height: 1.25; text-align: center; transition: background-color 160ms ease, color 160ms ease; }
+.btn:hover { background: var(--color-gold); color: var(--color-ink); }
+.btn-primary { border-color: var(--color-brand-red); background: var(--color-brand-red); color: #fff; }
+.btn-primary:hover { border-color: #b51e2b; background: #b51e2b; color: #fff; }
+
+.toghu { width: 100%; height: 120px; background: url('/assets/toghu_motif.jpg') left center / auto 120px repeat-x; }
+.toghu-blue { width: 100%; height: 130px; background: url('/assets/toghu_blue.jpg') left center / auto 130px repeat-x; }
+.toghu-braid { width: 100%; height: 84px; background: url('/assets/toghu_braid.jpg') left center / auto 84px repeat-x; }
+
+.hero-layout { display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: 96px 48px; }
+.hero-copy { display: flex; flex: 1 1 520px; flex-direction: column; align-items: flex-start; gap: 24px; }
+.event-meta { color: var(--color-gold); font-size: 14px; font-weight: 700; letter-spacing: 3px; }
+.hero-title { margin: 0; font-family: var(--font-display); font-size: 88px; font-weight: 800; line-height: 1; }
+.gold-text { color: var(--color-gold); }
+.hero-description { max-width: 560px; margin: 0; color: var(--color-muted); font-size: 20px; line-height: 1.6; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+.hero-art { display: flex; flex: 1 1 320px; justify-content: center; }
+.toghu-panel { width: min(100%, 360px); aspect-ratio: 0.79; border: 12px solid var(--color-gold); outline: 1px solid var(--color-cream); outline-offset: 7px; background: var(--color-ink-2) url('/assets/toghu_full.jpg') center / cover no-repeat; box-shadow: 14px 14px 0 var(--color-brand-red); }
+
+.about-section { display: flex; flex-wrap: wrap; gap: 48px; padding: 80px 48px; background: var(--color-cream); color: var(--color-ink); }
+.about-heading { flex: 1 1 360px; }
+.section-title { margin: 0; font-family: var(--font-display); font-size: 44px; font-weight: 600; line-height: 1.15; }
+.about-copy { display: flex; flex: 2 1 480px; flex-direction: column; gap: 16px; color: var(--color-cream-text); font-size: 18px; line-height: 1.7; }
+.about-copy p, .theme-copy p { margin: 0; }
+.theme-section { display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: 80px 48px; }
+.toghu-wide { display: flex; flex: 1 1 360px; min-height: 240px; align-items: center; justify-content: center; border: 8px solid var(--color-gold); background: var(--color-ink-2) url('/assets/toghu_full.jpg') center / cover no-repeat; box-shadow: inset 0 0 0 5px var(--color-ink); }
+.toghu-wide span { padding: 12px 20px; background: var(--color-ink); color: var(--color-gold); font-family: var(--font-display); font-size: 28px; font-weight: 800; text-align: center; }
+.theme-copy { display: flex; flex: 2 1 480px; flex-direction: column; gap: 16px; color: var(--color-muted); font-size: 18px; line-height: 1.7; }
+
+.speakers-section, .sponsors-section, .contact-section { background: var(--color-ink-2); }
+.speakers-section, .experience-section, .sponsors-section, .tickets-section { padding: 80px 48px; }
+.speakers-section .section-title, .sponsors-section .section-title { margin-bottom: 40px; }
+.speakers-grid, .experience-grid, .sponsors-grid, .tickets-grid { display: grid; gap: 24px; }
+.speakers-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.speaker-card { display: flex; min-height: 220px; flex-direction: column; align-items: flex-start; border: 2px solid var(--color-gold); padding: 0 24px 24px; }
+.speaker-diamond { width: 96px; height: 96px; flex: 0 0 auto; margin: 24px 0 24px 24px; transform: rotate(45deg); }
+.speaker-diamond-gold { background: var(--color-gold); }
+.speaker-diamond-red { background: var(--color-brand-red); }
+.speaker-name { font-size: 20px; font-weight: 700; }
+.speaker-talk { color: var(--color-muted); }
+.experience-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.experience-card { display: flex; min-height: 164px; flex-direction: column; gap: 12px; background: var(--color-cream); color: var(--color-ink); padding: 24px; }
+.experience-card strong { font-size: 22px; }
+.experience-card span { color: var(--color-cream-text); line-height: 1.6; }
+.sponsors-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.sponsor-placeholder { display: flex; min-height: 96px; align-items: center; justify-content: center; border: 2px dashed var(--color-dashed); color: var(--color-muted); }
+
+.tickets-section { background: var(--color-cream); color: var(--color-ink); }
+.tickets-title { margin: 0 0 12px; font-family: var(--font-display); font-size: 44px; font-weight: 600; }
+.tickets-intro { margin: 0 0 40px; color: var(--color-cream-text); font-size: 18px; }
+.tickets-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.ticket-card { display: flex; min-width: 0; flex-direction: column; align-items: stretch; gap: 12px; background: var(--color-ink); color: var(--color-cream); padding: 24px; }
+.ticket-card-title { font-size: 22px; font-weight: 700; }
+.ticket-price { color: var(--color-gold); font-size: 36px; font-weight: 800; line-height: 1.15; }
+.ticket-description { color: var(--color-muted); line-height: 1.6; }
+.ticket-card label { margin-top: 4px; font-size: 14px; }
+.ticket-card input { width: 100%; min-height: 48px; border: 0; border-radius: 0; padding: 12px; background: #fff; color: var(--color-ink); font-size: 16px; }
+.ticket-card input:focus-visible { outline-color: var(--color-gold); }
+.ticket-card .btn { width: 100%; margin-top: 8px; cursor: pointer; }
+.form-message { min-height: 1.4em; margin: 0; color: var(--color-gold); font-size: 14px; line-height: 1.4; }
+
+.faq-section { max-width: 996px; padding: 80px 48px; }
+.faq-section .section-title { margin-bottom: 32px; color: var(--color-gold); }
+.faq-item { border-bottom: 1px solid var(--color-dashed); }
+.faq-item:first-of-type { border-top: 1px solid var(--color-dashed); }
+.faq-item summary { display: flex; min-height: 64px; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; font-weight: 700; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--color-gold); font-size: 24px; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-answer { margin: 0 0 20px; color: var(--color-muted); line-height: 1.6; }
+.contact-section { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; padding: 64px 48px; }
+.contact-details { display: flex; flex-direction: column; gap: 8px; }
+.contact-section .section-title { margin: 0; font-size: 32px; }
+.contact-details span, .license-copy { color: var(--color-muted); }
+.license-copy { max-width: 420px; font-size: 14px; line-height: 1.6; }
+
+@media (max-width: 1050px) {
+  .site-header { flex-wrap: wrap; }
+  .site-nav { order: 4; flex: 1 0 100%; justify-content: flex-start; }
+}
+
+@media (max-width: 760px) {
+  .site-header { min-height: 76px; padding: 16px 24px; }
+  .menu-toggle { display: inline-flex; }
+  .site-nav { display: none; flex-direction: column; align-items: stretch; gap: 0; border-top: 1px solid var(--color-dashed); padding-top: 8px; }
+  .site-nav.is-open { display: flex; }
+  .site-nav a { border-bottom: 1px solid rgb(138 122 98 / 35%); }
+  .site-header > .btn { min-height: 44px; padding: 10px 12px; }
+  .hero-layout { gap: 40px; padding: 64px 24px; }
+  .hero-copy, .hero-art { flex-basis: 100%; }
+  .hero-title { font-size: clamp(52px, 13vw, 72px); }
+  .toghu-panel { width: min(78%, 320px); }
+  .about-section, .theme-section, .speakers-section, .experience-section, .sponsors-section, .tickets-section, .faq-section, .contact-section { padding: 64px 24px; }
+  .about-section, .theme-section { gap: 28px; }
+  .about-heading, .about-copy, .toghu-wide, .theme-copy { flex-basis: 100%; }
+  .section-title, .tickets-title { font-size: 38px; }
+  .toghu-wide { min-height: 220px; }
+  .toghu-wide span { font-size: 24px; }
+  .faq-section { max-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
