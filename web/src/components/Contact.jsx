@@ -1,4 +1,5 @@
 import { contact } from '../data/content.js'
+import { Link } from 'react-router-dom'
 
 function Contact() {
   return (
@@ -8,6 +9,10 @@ function Contact() {
         <span>{contact.email} · {contact.phone} · {contact.socialLinks}</span>
       </div>
       <div className="license-copy">This independent TEDx event is operated under license from TED.</div>
+      <nav className="footer-links" aria-label="Additional pages">
+        <Link to="/sponsors">Sponsors</Link>
+        <Link to="/referrals">Referrals</Link>
+      </nav>
     </section>
   )
 }
